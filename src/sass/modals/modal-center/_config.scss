@@ -1,0 +1,19 @@
+$background-modal: rgba(81, 94, 123, 0.5) !default;
+
+$background-content-modal: #fff !default;
+$border-radius-content-modal: 5px !default;
+$padding-content-modal: $padding-2 !default;
+
+// Body Modal
+$min-width: 300px !default;
+$max-width: 500px !default;
+$min-height: 300px !default;
+$max-height: 700px !default;
+
+$padding-body-modal: $padding-2 0 !default;
+
+// Footer Modal
+$modal-footer-align-itens-horizontal: $end !default;
+$modal-footer-align-itens-vertical: $middle !default;
+$modal-footer-gap: 20px !default;
+$modal-footer-padding: $padding-1 0 !default;

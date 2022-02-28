@@ -1,0 +1,63 @@
+@import "./config";
+
+#f-modal {
+    position: fixed;
+    background: $background-modal;
+    
+
+    &.show {
+        display: block;
+        .f-content-modal {
+            -webkit-animation: $animation-in;
+            animation: $animation-in;
+        }
+    }
+
+    &:not(.show) {
+        .f-content-modal {
+            -webkit-animation: $animation-out;
+            animation: $animation-out;
+        }        
+    }
+    
+
+    .f-outclick {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .f-content-modal {
+            min-height: $min-height;
+            min-width: $min-width;
+
+            max-width: $max-height;
+            max-width: $max-width;
+
+            background: $background-content-modal;
+            border-radius: $border-radius-content-modal;
+            padding: $padding-content-modal;
+            
+            position: relative;
+            z-index: 999;
+
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+
+            .f-body-modal {
+                padding: $padding-body-modal;
+            }
+
+            .f-footer-modal {
+                .f-close-modal {
+                    padding: $modal-footer-padding;
+                    display: flex;
+                    justify-content: $modal-footer-align-itens-horizontal;
+                    align-items: $modal-footer-align-itens-vertical;
+                }
+            }
+        }
+
+    }
+}

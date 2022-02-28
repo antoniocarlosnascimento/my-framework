@@ -1,0 +1,15 @@
+@import "./animations/animations";
+
+$name-animation-in: scale-down-hor-center !default;
+$animation-in: '' !default;
+$name-animation-out: '' !default;
+$animation-out: '' !default;
+
+@if $name-animation-in == fade-in-fwd {
+    $animation-in: fade-in-fwd 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    $animation-out: fade-in-bck 0.6s ease-out both;
+} @else if ($name-animation-in == scale-down-hor-center) {
+    $animation-in: scale-up-hor-center 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    $animation-out: scale-down-hor-center 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
